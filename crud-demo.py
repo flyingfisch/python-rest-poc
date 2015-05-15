@@ -2,7 +2,6 @@
 
 from rest import CRUD
 
-#User class {{{
 class User:
     name = ""
     age = 0
@@ -15,7 +14,6 @@ class User:
 
     def __repr__(self):
         return "User {{ name: {0}, age: {1}, weight: {2} }}".format(self.name, self.age, self.weight)
-#}}}
 
 # make a collection of users
 users = CRUD()
@@ -42,3 +40,4 @@ print("Updated John\r\n", users.read())
 # delete john
 users.delete(3)
 print("Deleted John\r\n", users.read())
+
